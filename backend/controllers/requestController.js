@@ -23,15 +23,28 @@ const register = async (req, res) => {
     }
 }
 
+// const getAll = async (req, res) => {
+//     try {
+//         const requests = await Request.find();
+//         res.json(requests);
+//     } catch(err) {
+//         console.error(err.message);
+//         res.status(500).send('Server error');
+//     }
+// }
 const getAll = async (req, res) => {
     try {
-        const requests = await Request.find();
-        res.json(requests);
-    } catch(err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
+      const requests = await Request.find();
+      res.json({
+        success: true,
+        requests, // ✅ Return as `requests`, not just an array
+      });
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).json({ success: false, message: "Server error" }); // ✅ Return JSON instead of plain text
     }
-}
+  };
+  
 
 module.exports = {
     register,

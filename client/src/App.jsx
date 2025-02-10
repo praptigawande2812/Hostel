@@ -67,3 +67,7 @@ function App() {
 }
 
 export default App;
+
+//admin login and pass
+//prapti@gmail.com
+//prapti@1234

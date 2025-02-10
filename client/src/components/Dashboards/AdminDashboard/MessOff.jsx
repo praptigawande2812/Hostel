@@ -2,11 +2,11 @@ import { useState, useRef, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import  LoadingBar  from 'react-top-loading-bar'
+
 
 function MessOff() {
   const getRequests = async () => {
-    setProgress(30);
+  
     const hostel = JSON.parse(localStorage.getItem("hostel"));
     const res = await fetch("http://localhost:3000/api/messoff/list", {
       method: "POST",
@@ -15,21 +15,17 @@ function MessOff() {
       },
       body: JSON.stringify({ hostel: hostel._id }),
     });
-    setProgress(40);
+   
     const data = await res.json();
-    setProgress(60)
+    
     if (data.success) {
       data.list.map((req) => {
         req.id = req._id;
         req.from = new Date(req.leaving_date).toDateString().slice(4, 10);
         req.to = new Date(req.return_date).toDateString().slice(4, 10);
         req._id = req.student._id;
-        // req.student.name = req.student.name;
-        // req.student.room_no = req.student.room_no;
-        // req.status = req.status;
-        setProgress(progress+10)
+       
       });
-      setProgress(80);
       setNewReqs(data.list);
       setApprovedReqs(data.approved);
       setRejectedReqs(data.rejected);
@@ -39,7 +35,7 @@ function MessOff() {
         newReqs.length,
       ];
     }
-    setProgress(100);
+  
   };
 
   const updateRequest = async (id, status) => {
@@ -75,7 +71,7 @@ function MessOff() {
     }
   };
 
-  const [progress, setProgress] = useState(0);
+  
   const [newReqs, setNewReqs] = useState([]);
   const [approvedReqs, setApprovedReqs] = useState(0);
   const [rejectedReqs, setRejectedReqs] = useState(0);
@@ -118,7 +114,7 @@ const reject = (id) => {
   }, [newReqs.length, approvedReqs, rejectedReqs]);
   return (
     <div className="w-full h-screen flex flex-col gap-3 items-center justify-center">
-      <LoadingBar color="#0000FF" progress={progress} onLoaderFinished={() => setProgress(0)} />
+      
       <h1 className="text-white font-bold text-5xl">Manage Leave</h1>
       <div className="w-96 h-52">{graph}</div>
       <div className="bg-neutral-950 px-10 py-5 rounded-xl shadow-xl sm:w-[50%] sm:min-w-[450px] w-full mt-5 max-h-96 overflow-auto">
@@ -140,7 +136,7 @@ const reject = (id) => {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-6 h-6 group-hover:scale-105 group-hover:text-yellow-500 transition-all"
+                      className="w-6 h-6 transition-all"
                     >
                       <path
                         strokeLinecap="round"

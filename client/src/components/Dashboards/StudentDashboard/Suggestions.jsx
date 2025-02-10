@@ -4,6 +4,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Suggestions() {
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+
   const registerSuggestions = async (e) => {
     e.preventDefault();
     const student = JSON.parse(localStorage.getItem("student"));
@@ -12,7 +15,7 @@ function Suggestions() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({student: student._id, hostel: student.hostel, title, description: desc}),
+      body: JSON.stringify({ student: student._id, hostel: student.hostel, title, description: desc }),
     });
 
     const data = await response.json();
@@ -23,7 +26,9 @@ function Suggestions() {
         hideProgressBar: false,
         closeOnClick: true,
         draggable: true,
-        });
+      });
+      setTitle("");
+      setDesc("");
     } else {
       toast.error("Suggestion registration failed", {
         position: "top-right",
@@ -31,14 +36,9 @@ function Suggestions() {
         hideProgressBar: false,
         closeOnClick: true,
         draggable: true,
-        });
+      });
     }
   };
-
-
-
-  const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
 
   function titleChange(e) {
     setTitle(e.target.value);

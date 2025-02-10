@@ -177,7 +177,6 @@ export default function Index() {
   ]);
 
   useEffect(() => {
-    //! FETCH FROM DATABASE DANISH
     setNotifications([368115, 347403, 377902, 369420]);
   }, []);
 

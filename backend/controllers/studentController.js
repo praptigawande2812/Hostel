@@ -149,6 +149,8 @@ const updateStudent = async (req, res) => {
     }
 }
 
+  
+
 const deleteStudent = async (req, res) => {
     try {
         // console.log(req.body);
