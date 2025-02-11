@@ -76,8 +76,8 @@ function Sidebar({ links }) {
           isOpen ? "translate-x-0" : "absolute -translate-x-full"
         }`}
       >
-        <Link
-          to={`/${links[0].for}-dashboard`}
+        <div
+          // to={`/${links[0].for}-dashboard`}
           className="py-4 px-4 md:py-5 lg:py-4 gap-2 bg-blue-700 flex items-center text-2xl"
         >
           <svg
@@ -95,7 +95,7 @@ function Sidebar({ links }) {
             />
           </svg>{" "}
           <span className="md:hidden lg:inline">Dashboard</span>
-        </Link>
+        </div>
         <div className="flex flex-col space-y-1 text-2xl text-white">
           {links.map((link) => (
             <Link
