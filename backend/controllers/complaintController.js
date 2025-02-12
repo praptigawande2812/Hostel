@@ -31,6 +31,24 @@ exports.registerComplaint = async (req, res) => {
 // @route   GET api/complaint
 // @desc    Get all complaints by hostel id
 // @access  Public
+// exports.getbyhostel = async (req, res) => {
+//     let success = false;
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty()) {
+//         return res.status(400).json({ errors: errors.array(), success });
+//     }
+//     const { hostel } = req.body;
+//     try {
+//         const complaints = await Complaint.find({ hostel }).populate('student', ['name', 'room_no']);
+//         success = true;
+//         res.json({ success, complaints });
+//     }
+//     catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('Server error');
+//     }
+// }
+
 exports.getbyhostel = async (req, res) => {
     let success = false;
     const errors = validationResult(req);
@@ -39,7 +57,7 @@ exports.getbyhostel = async (req, res) => {
     }
     const { hostel } = req.body;
     try {
-        const complaints = await Complaint.find({ hostel }).populate('student', ['name', 'room_no']);
+        const complaints = await Complaint.find({ hostel, status: { $ne: "solved" } }).populate('student', ['name', 'room_no']);
         success = true;
         res.json({ success, complaints });
     }
@@ -48,6 +66,7 @@ exports.getbyhostel = async (req, res) => {
         res.status(500).send('Server error');
     }
 }
+
 
 // @route   GET api/complaint
 // @desc    Get all complaints by student id
@@ -73,6 +92,26 @@ exports.getbystudent = async (req, res) => {
 // @route   GET api/complaint
 // @desc    Get complaint by complaint id
 // @access  Public
+// exports.resolve = async (req, res) => {
+//     let success = false;
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty()) {
+//         return res.status(400).json({ errors: errors.array(), success });
+//     }
+//     const { id } = req.body;
+//     try {
+//         const complaint = await Complaint.findById(id);
+//         complaint.status = "solved";
+//         await complaint.save();
+//         success = true;
+//         res.json({ success });
+//     }
+//     catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('Server error');
+//     }
+// }
+
 exports.resolve = async (req, res) => {
     let success = false;
     const errors = validationResult(req);
@@ -82,10 +121,13 @@ exports.resolve = async (req, res) => {
     const { id } = req.body;
     try {
         const complaint = await Complaint.findById(id);
+        if (!complaint) {
+            return res.status(404).json({ success, msg: "Complaint not found" });
+        }
         complaint.status = "solved";
         await complaint.save();
         success = true;
-        res.json({ success });
+        res.json({ success, msg: "Complaint resolved successfully" });
     }
     catch (err) {
         console.error(err.message);

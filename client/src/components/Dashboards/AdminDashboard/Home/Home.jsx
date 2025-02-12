@@ -15,7 +15,6 @@ import { toast } from "react-toastify";
 
 function Home() {
   const admin = JSON.parse(localStorage.getItem("admin"));
-  const hostel = JSON.parse(localStorage.getItem("hostel"));
   const [noOfStudents, setNoOfStudents] = useState(0);
   const [complaints, setComplaints] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
@@ -224,7 +223,7 @@ function Home() {
       <h1 className="text-white font-bold text-5xl text-center">
         Welcome <span className="text-blue-500">{admin.name || "admin"}!</span>
       </h1>
-      <h1 className="text-white text-xl">Manager, {hostel.name || "hostel"}</h1>
+      <h1 className="text-white text-xl">Manager</h1>
       <div className="flex w-full gap-5 sm:px-20 pt-5 flex-wrap items-center justify-center">
         <ShortCard title="Total Students" number={noOfStudents} />
         <ShortCard title="Total Complaints" number={complaints.length} />
