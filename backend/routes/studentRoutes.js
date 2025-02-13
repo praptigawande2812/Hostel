@@ -42,21 +42,21 @@ router.post('/get-all-students',[
 // @route  POST api/student/update-student
 // @desc   Update student
 // @access Public
-router.post('/update-student', [
-    check('cms_id', 'CMS ID is required').not().isEmpty(),
-    check('room_no', 'Room number is required').not().isEmpty(),
-    check('batch', 'Batch is required').not().isEmpty(),
-    check('dept', 'Department is required').not().isEmpty(),
-    check('course', 'Course is required').not().isEmpty(),
-    check('email', 'Please include a valid email').isEmail(),
-    check('father_name', 'Father name is required').not().isEmpty(),
-    check('contact', 'Contact is required').not().isEmpty(),
-    check('address', 'Address is required').not().isEmpty(),
-    check('dob', 'Date of birth is required').not().isEmpty(),
-    check('cnic', 'CNIC is required').not().isEmpty(),
-    check('user', 'User is required').not().isEmpty(),
-    check('hostel', 'Hostel is required').not().isEmpty()
-], updateStudent);
+// router.post('/update-student', [
+//     check('cms_id', 'CMS ID is required').not().isEmpty(),
+//     check('room_no', 'Room number is required').not().isEmpty(),
+//     check('batch', 'Batch is required').not().isEmpty(),
+//     check('dept', 'Department is required').not().isEmpty(),
+//     check('course', 'Course is required').not().isEmpty(),
+//     check('email', 'Please include a valid email').isEmail(),
+//     check('father_name', 'Father name is required').not().isEmpty(),
+//     check('contact', 'Contact is required').not().isEmpty(),
+//     check('address', 'Address is required').not().isEmpty(),
+//     check('dob', 'Date of birth is required').not().isEmpty(),
+//     check('cnic', 'CNIC is required').not().isEmpty(),
+//     check('user', 'User is required').not().isEmpty(),
+//     check('hostel', 'Hostel is required').not().isEmpty()
+// ], updateStudent);
 
 // @route  POST api/student/delete-student
 // @desc   Delete student

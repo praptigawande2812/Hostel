@@ -108,11 +108,9 @@ function Sidebar({ links }) {
               }`}
             >
               {link.svg}
-              {/* Replace "Mess" with "Leave" for specific link */}
+              {link.text}
               {
-            link.url === "/student-dashboard/mess" || link.url === "/admin-dashboard/mess"
-            ? "Leave"
-           : link.text
+            
 }
 
             </Link>

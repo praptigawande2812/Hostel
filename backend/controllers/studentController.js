@@ -118,36 +118,36 @@ const getAllStudents = async (req, res) => {
     }
 }
 
-const updateStudent = async (req, res) => {
+// const updateStudent = async (req, res) => {
 
-    let success = false;
-    try {
-        const student = await Student.findById(req.student.id).select('-password');
+//     let success = false;
+//     try {
+//         const student = await Student.findById(req.student.id).select('-password');
 
-        const { name, cms_id, room_no, batch, dept, course, email, father_name, contact, address, dob, cnic, user, hostel } = req.body;
+//         const { name, cms_id, room_no, batch, dept, course, email, father_name, contact, address, dob, cnic, user, hostel } = req.body;
 
-        student.name = name;
-        student.cms_id = cms_id;
-        student.room_no = room_no;
-        student.batch = batch;
-        student.dept = dept;
-        student.course = course;
-        student.email = email;
-        student.father_name = father_name;
-        student.contact = contact;
-        student.address = address;
-        student.dob = dob;
-        student.cnic = cnic;
-        student.hostel = hostel;
+//         student.name = name;
+//         student.cms_id = cms_id;
+//         student.room_no = room_no;
+//         student.batch = batch;
+//         student.dept = dept;
+//         student.course = course;
+//         student.email = email;
+//         student.father_name = father_name;
+//         student.contact = contact;
+//         student.address = address;
+//         student.dob = dob;
+//         student.cnic = cnic;
+//         student.hostel = hostel;
 
-        await student.save();
+//         await student.save();
 
-        success = true;
-        res.json({success, student});
-    } catch (err) {
-        res.status(500).json({success, errors: [{msg: 'Server error'}]});
-    }
-}
+//         success = true;
+//         res.json({success, student});
+//     } catch (err) {
+//         res.status(500).json({success, errors: [{msg: 'Server error'}]});
+//     }
+// }
 
   
 
@@ -221,7 +221,7 @@ const csvStudent = async (req, res) => {
 module.exports = {
     registerStudent,
     getStudent,
-    updateStudent,
+    // updateStudent,
     deleteStudent,
     getAllStudents,
     csvStudent

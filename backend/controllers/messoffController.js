@@ -35,7 +35,7 @@ exports.requestMessOff = async (req, res) => {
 }
 
 // @route   GET count of request api/messoff/count
-// @desc    Get all mess off requests
+// @desc    Get all mess off requests of student
 // @access  Private
 exports.countMessOff = async (req, res) => {
     let success = false;

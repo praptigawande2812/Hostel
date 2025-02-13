@@ -105,7 +105,7 @@ function Mess() {
         .then((res) => res.json())
         .then((result) => {
           if (result.success) {
-            setMessOff(result.approved);
+            setMessOff(result.approved);//approve contains the no of days leave was taken
             setRequests(result.list.length);
             setRequestsList(result.list);
           } else {
@@ -139,12 +139,12 @@ function Mess() {
   return (
     
     <div className="w-full h-screen gap-10 flex flex-col items-center justify-center max-h-screen overflow-y-auto pt-[500px] sm:pt-96 md:pt-96 lg:pt-40">
-      <h1 className="text-white font-bold text-5xl">Leave</h1>
-      <ul className="flex gap-5 text-white text-xl px-5 sm:p-0 text-center">
+      <h1 className="text-white font-bold text-5xl">Mess</h1>
+      {/* <ul className="flex gap-5 text-white text-xl px-5 sm:p-0 text-center">
         <li>Total Attended: {daysofmonthtilltoday - Messoff} </li>
         <li>Leave: {loading ? loader : Messoff}</li>
         <li>Requests Sent: {loading ? loader : requests}</li>
-      </ul>
+      </ul> */}
       <div className="w-full gap-10 flex items-center justify-center flex-wrap">
         <div className="h-[30vh] gap-2 flex items-center justify-center flex-wrap">
           <Doughnut
@@ -173,13 +173,13 @@ function Mess() {
             }}
           />
           <ul className="text-white">
+            {/* <li className="flex gap-2">
+              {" "}
+              <span className="w-10 h-5 bg-orange-500 block"></span>Mess Off
+            </li> */}
             <li className="flex gap-2">
               {" "}
-              <span className="w-10 h-5 bg-orange-500 block"></span>Leave
-            </li>
-            <li className="flex gap-2">
-              {" "}
-              <span className="w-10 h-5 bg-yellow-500 block"></span> Requested
+              <span className="w-10 h-5 bg-yellow-500 block"></span>
               Leave
             </li>
             <li className="flex gap-2">

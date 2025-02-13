@@ -230,7 +230,7 @@ function Home() {
         <ShortCard title="Total Suggestions" number={suggestions.length} />
       </div>
       <div className="w-full flex gap-5 sm:px-20 h-80 flex-wrap items-center justify-center">
-        <List list={messReqs} title="Leave" icon={messIcon} />
+        <List list={messReqs} title="mess" icon={messIcon} />
         {graph}
         <List list={suggestions} title="suggestions" icon={suggestionIcon} />
       </div>

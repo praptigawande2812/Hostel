@@ -51,23 +51,23 @@ exports.getbyhostel = async (req, res) => {
 // @route   GET api/suggestion
 // @desc    Get all suggestions by student id
 // @access  Public
-exports.getbystudent = async (req, res) => {
-    let success = false;
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array(), success });
-    }
-    const { student } = req.body;
-    try {
-        const suggestions = await Suggestion.find({ student }).populate('hostel', ['name']);
-        success = true;
-        res.json({ success, suggestions });
-    }
-    catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
-    }
-}
+// exports.getbystudent = async (req, res) => {
+//     let success = false;
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty()) {
+//         return res.status(400).json({ errors: errors.array(), success });
+//     }
+//     const { student } = req.body;
+//     try {
+//         const suggestions = await Suggestion.find({ student }).populate('hostel', ['name']);
+//         success = true;
+//         res.json({ success, suggestions });
+//     }
+//     catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('Server error');
+//     }
+// }
 
 // @route   Update api/suggestion
 // @desc    Update suggestion

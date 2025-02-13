@@ -53,7 +53,7 @@ function Modal({ closeModal, suggestion }) {
               className="text-white focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-green-600 hover:bg-green-700"
               onClick={() => ack()}
             >
-              Acknowledge
+              Close
             </button>
           </div>
         </div>

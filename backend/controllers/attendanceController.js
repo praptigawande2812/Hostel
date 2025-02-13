@@ -46,20 +46,20 @@ const getAttendance = async (req, res) => {
     }
 }
 
-const updateAttendance = async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(422).json({ errors: errors.array() });
-    }
-    const { student, status } = req.body;
-    try {
-        const attendance = await Attendance.findOneAndUpdate({ student, date:date.now() }, { status });
-        res.status(200).json(attendance);
-    }
-    catch (err) {
-        res.status(500).json({ error: err.message });
-    }
-}
+// const updateAttendance = async (req, res) => {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty()) {
+//         return res.status(422).json({ errors: errors.array() });
+//     }
+//     const { student, status } = req.body;
+//     try {
+//         const attendance = await Attendance.findOneAndUpdate({ student, date:date.now() }, { status });
+//         res.status(200).json(attendance);
+//     }
+//     catch (err) {
+//         res.status(500).json({ error: err.message });
+//     }
+// }
 
 const getHostelAttendance = async (req, res) => {
     let success = false;
@@ -83,7 +83,7 @@ const getHostelAttendance = async (req, res) => {
 module.exports = {
     markAttendance,
     getAttendance,
-    updateAttendance,
+    // updateAttendance,
     getHostelAttendance
 }
 

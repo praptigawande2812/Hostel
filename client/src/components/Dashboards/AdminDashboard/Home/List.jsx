@@ -42,6 +42,8 @@ function List({ list, title, icon, addClasses }) {
         <Link className="py-3 text-lg text-center rounded-lg w-full text-white border-blue-600 border-2 hover:bg-blue-600 transition-all" to={title}>
           Manage {title}
         </Link>
+    
+
       </div>
     </div>
   );
