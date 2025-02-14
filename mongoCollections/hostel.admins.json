@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "645b965902723b061fab22a2"
   },
-  "name": "Muhammad Danish",
+  "name": "Admin",
   "email": "muhammaddanish14@gmail.com",
   "father_name": "Muhammad Tariq",
   "contact": "03074741119",
@@ -19,6 +19,50 @@
   },
   "date": {
     "$date": "2023-05-10T13:04:25.419Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679baffb1349cce0832552f7"
+  },
+  "name": "Test User",
+  "email": "test@gmail.com",
+  "father_name": "Test Father",
+  "contact": "03012345678",
+  "address": "Test Address, City, Country",
+  "dob": "1990-01-01T00:00:00.000+00:00",
+  "cnic": "1234567890123",
+  "user": {
+    "$oid": "679ba7851349cce0832552d8"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "date": {
+    "$date": "2023-05-19T16:16:46.335Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e558fca99f397a99393ca"
+  },
+  "name": "Miss.Prapti",
+  "email": "prapti@gmail.com",
+  "father_name": "Naresh",
+  "contact": "07058118269",
+  "address": "Walchand College of Engineering, Sangli",
+  "dob": "2003-12-28T00:00:00.000+00:00",
+  "cnic": "112345556789904542345",
+  "user": {
+    "$oid": "679e54211f09c79b01b6881c"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "date": {
+    "$date": "2025-02-01T17:04:33.691Z"
   },
   "__v": 0
 }]

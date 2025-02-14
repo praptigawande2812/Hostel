@@ -2,9 +2,19 @@
   "_id": {
     "$oid": "645aae56db7005c0dc64fd92"
   },
-  "name": "Attar Hostel 1",
+  "name": "D2",
   "location": "https://goo.gl/maps/Az89wA3NsPaXfMfP9",
   "rooms": 350,
   "capacity": 700,
   "vacant": 350
+},
+{
+  "_id": {
+    "$oid": "67acd61f583c502850313782"
+  },
+  "name": "D1",
+  "location": "https://goo.gl/maps/Az89wA3NsPaXfMfP9",
+  "rooms": 30,
+  "capacity": 120,
+  "vacant": 12
 }]

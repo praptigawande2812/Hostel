@@ -1,58 +1,116 @@
 [{
   "_id": {
-    "$oid": "6467a0ee36257fce55bac877"
+    "$oid": "679e4e6c6d3c225b950d53b4"
   },
-  "name": "Muhammad Danish Azeem",
-  "cms_id": 366885,
-  "room_no": 317,
-  "batch": 2021,
-  "dept": "SEECS",
-  "course": "CS",
-  "email": "muhammaddanish1458@gmail.com",
-  "father_name": "Muhammad Tariq",
-  "contact": "03131323231",
-  "address": "Attar Block 1",
+  "name": "Kranti",
+  "cms_id": 22610029,
+  "room_no": 12,
+  "batch": 2,
+  "dept": "IT",
+  "course": "BTECH",
+  "email": "kranti@gmail.com",
+  "father_name": "Father",
+  "contact": "09876543219",
+  "address": "Walchand College of Engineering,Sangli",
   "dob": {
-    "$date": "2004-06-08T00:00:00.000Z"
+    "$date": "2025-02-05T00:00:00.000Z"
   },
-  "cnic": "1234567891234",
+  "cnic": "1234567890123456",
   "user": {
-    "$oid": "6467a0ee36257fce55bac875"
+    "$oid": "679e4e6c6d3c225b950d53b2"
   },
   "hostel": {
     "$oid": "645aae56db7005c0dc64fd92"
   },
   "date": {
-    "$date": "2023-05-19T16:16:46.538Z"
+    "$date": "2025-02-01T16:40:12.278Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "6467df72c2b3142559d29326"
+    "$oid": "679e54211f09c79b01b6881e"
   },
-  "name": "AbdulAhad",
-  "cms_id": 368115,
-  "room_no": 212,
-  "batch": 2021,
-  "dept": "seecs",
-  "course": "cs",
-  "email": "ahad@gmail.com",
-  "father_name": "dadaadad",
-  "contact": "03260144411",
-  "address": "dasdsaadsads",
+  "name": "Miss.Prapti",
+  "cms_id": 22610052,
+  "room_no": 14,
+  "batch": 3,
+  "dept": "IT",
+  "course": "BTECH",
+  "email": "prapti@gmail.com",
+  "father_name": "Naresh",
+  "contact": "07058118269",
+  "address": "Walchand College of Engineering,Sangli",
   "dob": {
-    "$date": "2023-05-09T00:00:00.000Z"
+    "$date": "2003-12-28T00:00:00.000Z"
   },
-  "cnic": "6110197584215",
+  "cnic": "112345556789904542345",
   "user": {
-    "$oid": "6467df72c2b3142559d29324"
+    "$oid": "679e54211f09c79b01b6881c"
   },
   "hostel": {
     "$oid": "645aae56db7005c0dc64fd92"
   },
   "date": {
-    "$date": "2023-05-19T20:43:30.844Z"
+    "$date": "2025-02-01T17:04:33.691Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67acd140c6048e87b0a1d412"
+  },
+  "name": "Nikita",
+  "cms_id": 22510099,
+  "room_no": 12,
+  "batch": 5,
+  "dept": "CSE",
+  "course": "BTECH",
+  "email": "nikita123@gmail.com",
+  "father_name": "Father",
+  "contact": "09876543213",
+  "address": "Walchand College of Engineering,Sangli",
+  "dob": {
+    "$date": "2005-01-04T00:00:00.000Z"
+  },
+  "cnic": "1234567890115633434356",
+  "user": {
+    "$oid": "67acd140c6048e87b0a1d410"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "date": {
+    "$date": "2025-02-12T16:50:08.944Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67acd190c6048e87b0a1d418"
+  },
+  "name": "Shruti",
+  "cms_id": 22610061,
+  "room_no": 13,
+  "batch": 3,
+  "dept": "IT",
+  "course": "BTECH",
+  "email": "shruti@gmail.com",
+  "father_name": "Father",
+  "contact": "09876543216",
+  "address": "Walchand College of Engineering,Sangli",
+  "dob": {
+    "$date": "2004-01-11T00:00:00.000Z"
+  },
+  "cnic": "5234567890123456",
+  "user": {
+    "$oid": "67acd190c6048e87b0a1d416"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "date": {
+    "$date": "2025-02-12T16:51:28.976Z"
   },
   "__v": 0
 }]

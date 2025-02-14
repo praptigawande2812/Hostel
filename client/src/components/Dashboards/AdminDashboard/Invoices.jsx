@@ -15,7 +15,7 @@ function Invoices() {
         },
         body: JSON.stringify({ hostel: hostel._id }),
       });
-
+ 
       const data = await res.json();
       if (data.success) {
         toast.success("Invoices generated succesfully!", {
@@ -152,7 +152,6 @@ function Invoices() {
         theme: "dark",
       });
     }
-
   };
 
  
@@ -211,7 +210,7 @@ function Invoices() {
                     </div>
                     <button
                       className="group/show relative z-0"
-                      onClick={() => approveInvoice(invoice.student._id)}
+                      onClick={() => approveInvoice(invoice.student)}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -28,9 +28,117 @@
   },
   "title": "Fee ",
   "description": "Fee payment should be accepted using HBL mobile",
-  "status": "pending",
+  "status": "approved",
   "date": {
     "$date": "2023-05-22T08:45:23.453Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a9bb797efb972dcb1b133e"
+  },
+  "student": {
+    "$oid": "679e4e6c6d3c225b950d53b4"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "title": "In time",
+  "description": "Increase Hostel in time on weekends",
+  "status": "approved",
+  "date": {
+    "$date": "2025-02-10T08:40:25.398Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ab4f190d53cb60e7b245de"
+  },
+  "student": {
+    "$oid": "679e4e6c6d3c225b950d53b4"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "title": "In time",
+  "description": "Increase in time",
+  "status": "approved",
+  "date": {
+    "$date": "2025-02-11T13:22:33.357Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ab4f610d53cb60e7b245e0"
+  },
+  "student": {
+    "$oid": "679e4e6c6d3c225b950d53b4"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "title": "Drinking Water",
+  "description": "Keep cold water during summers",
+  "status": "approved",
+  "date": {
+    "$date": "2025-02-11T13:23:45.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ab4f830d53cb60e7b245e2"
+  },
+  "student": {
+    "$oid": "679e4e6c6d3c225b950d53b4"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "title": "Drinking Water",
+  "description": "Keep cold water during summers",
+  "status": "approved",
+  "date": {
+    "$date": "2025-02-11T13:24:19.014Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ab77c20d53cb60e7b246a6"
+  },
+  "student": {
+    "$oid": "679e4e6c6d3c225b950d53b4"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "title": "In time",
+  "description": "Increase ",
+  "status": "approved",
+  "date": {
+    "$date": "2025-02-11T16:16:02.767Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67adef9491ddf94bf40888f1"
+  },
+  "student": {
+    "$oid": "679e4e6c6d3c225b950d53b4"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "title": "In time",
+  "description": "increase intime",
+  "status": "pending",
+  "date": {
+    "$date": "2025-02-13T13:11:48.894Z"
   },
   "__v": 0
 }]

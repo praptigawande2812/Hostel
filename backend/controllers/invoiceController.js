@@ -99,20 +99,57 @@ exports.getInvoices = async (req, res) => {
 // @route   GET api/invoice/update
 // @desc    Update invoice
 // @access  Public
+// exports.updateInvoice = async (req, res) => {
+//     let success = false;
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty()) {
+//         return res.status(400).json({ errors: errors.array(), success });
+//     }
+//     const { student, status } = req.body;
+//     try {
+//         let invoice = await Invoice.findOneAndUpdate({ student: student, date: { $gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1) } }, { status: status });
+//         success = true;
+//         res.status(200).json({ success, invoice });
+//     }
+//     catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('Server error');
+//     }
+// }
 exports.updateInvoice = async (req, res) => {
     let success = false;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array(), success });
     }
+
     const { student, status } = req.body;
+
     try {
-        let invoice = await Invoice.findOneAndUpdate({ student: student, date: { $gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1) } }, { status: status });
-        success = true;
-        res.status(200).json({ success, invoice });
-    }
-    catch (err) {
+        let invoice = await Invoice.findOne({ 
+            student: student, 
+            date: { $gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1) } 
+        });
+
+        if (!invoice) {
+            return res.status(404).json({ success, message: "Invoice not found" });
+        }
+
+        if (status.toLowerCase() === "approved") {
+            // If the invoice is approved, remove it from the database
+            await Invoice.deleteOne({ _id: invoice._id });
+            success = true;
+            return res.status(200).json({ success, message: "Invoice approved and removed from records" });
+        } else {
+            // Otherwise, just update the status
+            invoice.status = status;
+            await invoice.save();
+            success = true;
+            return res.status(200).json({ success, invoice });
+        }
+    } catch (err) {
         console.error(err.message);
-        res.status(500).send('Server error');
+        res.status(500).send("Server error");
     }
-}
+};
+
