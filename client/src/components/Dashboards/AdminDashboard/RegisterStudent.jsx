@@ -128,7 +128,7 @@ function RegisterStudent() {
             <Input
               field={{
                 name: "cms",
-                placeholder: "Student CMS",
+                placeholder: "Student PRN",
                 type: "number",
                 req: true,
                 value: cms,

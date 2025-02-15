@@ -199,7 +199,7 @@ const csvStudent = async (req, res) => {
         students.forEach(student => {
             student.hostel_name = shostel.name;
             student.d_o_b = new Date(student.dob).toDateString().slice(4);
-            student.cnic_no = student.cnic.slice(0, 5) + '-' + student.cnic.slice(5, 12) + '-' + student.cnic.slice(12);
+            // student.cnic_no = student.cnic.slice(0, 5) + '-' + student.cnic.slice(5, 12) + '-' + student.cnic.slice(12);
             student.contact_no = "+92 "+student.contact.slice(1);
         });
 
