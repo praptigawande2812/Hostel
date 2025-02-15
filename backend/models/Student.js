@@ -48,11 +48,11 @@ const StudentSchema = new Schema({
         type:Date,
         required:true
     },
-    cnic:{
-        type:String,
-        required:true,
-        unique:true
-    },
+    // cnic:{
+    //     type:String,
+    //     required:true,
+    //     unique:true
+    // },
     user:{
         type:Schema.Types.ObjectId,
         ref:'user'

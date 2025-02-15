@@ -22,7 +22,7 @@ function RegisterStudent() {
         contact: contact,
         address: address,
         dob: dob,
-        cnic: cnic,
+        // cnic: cnic,
         hostel: hostel,
         password: password
       };
@@ -58,7 +58,7 @@ function RegisterStudent() {
         setContact("");
         setAddress("");
         setDob("");
-        setCnic("");
+        // setCnic("");
         setPassword("");
         setLoading(false);
       } else {
@@ -102,7 +102,7 @@ function RegisterStudent() {
   const [contact, setContact] = useState();
   const [address, setAddress] = useState();
   const [dob, setDob] = useState();
-  const [cnic, setCnic] = useState();
+  // const [cnic, setCnic] = useState();
   const [password, setPassword] = useState();
 
   const [loading, setLoading] = useState(false);
@@ -145,7 +145,7 @@ function RegisterStudent() {
                 onChange: (e) => setDob(e.target.value),
               }}
             />
-            <Input
+            {/* <Input
               field={{
                 name: "cnic",
                 placeholder: "Student CNIC",
@@ -154,7 +154,7 @@ function RegisterStudent() {
                 value: cnic,
                 onChange: (e) => setCnic(e.target.value),
               }}
-            />
+            /> */}
           </div>
           <div className="flex gap-5 w-full flex-wrap justify-center">
             <Input

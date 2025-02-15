@@ -45,7 +45,7 @@ const registerStudent = async (req, res) => {
             contact,
             address,
             dob,
-            cnic,
+            // cnic,
             user: user.id,
             hostel: shostel.id
         });
