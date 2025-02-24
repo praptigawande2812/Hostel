@@ -1,69 +1,67 @@
-# Hostel Management System
-It is a MERN stack application built for ease of hostel management.
+# HOSTEL MANAGEMENT SYSTEM  
 
-## Features
+A **MERN stack** web application designed to simplify and automate hostel management tasks. It provides an **Admin Panel** for managing students, attendance, complaints, leave, invoices, and suggestions, while students can track attendance, request mess off, and raise complaints or suggestions.  
 
-- [x] Login/Signup
-- [x] Admin Panel
-    - Registration of new students
-    - Marking attendance
-    - Handeling complaints
-    - Managing mess
-    - Generating invoices
-    - Handeling suggestions
-- [x] Student Panel
-    - Viewing attendance
-    - Requesting mess off
-    - Viewing invoices
-    - Making complaints
-    - Making suggestions
+---  
 
-## Installation
-Install [Node.js](https://nodejs.org/en/download) and [MongoDB](https://www.mongodb.com/try/download/community) on your system.
+## Features  
 
-Clone the repository and install the dependencies.
-```sh
-cd client
-npm i
-```
-```sh
-cd ../server
-npm i
-```
+## Authentication  
+✔ Secure **Login/Signup** for admins and students.  
 
-```sh
-cd ../
-npm i -g concurrently
-```
+---  
 
-## Setup DB
-- Create a mongodb database named `hostel`
-- Create collections and given names like for `hostel.users.json` --> `users` in mongoCollections
-- Add data by importing file like `hostel.users.json`
+## Admin Panel  
+✔ **Student Management** – Register new students and manage records.  
 
-## Usage
+✔ **Attendance Tracking** – Mark and maintain student attendance.  
 
-```sh
+✔ **Complaint Handling** – Review and resolve student complaints.  
+
+✔ **Leave Management** – Oversee meal plans and student mess requests.  
+
+✔ **Invoice Generation** – Generate and manage invoices for hostel fees.  
+
+✔ **Suggestion Handling** – Review and act on student suggestions.  
+
+---  
+
+## Student Panel  
+✔ **View Attendance** – Check daily attendance records.  
+
+✔ **Request Mess Off** – Apply for meal cancellation.  
+
+✔ **View Invoices** – Access and track hostel fee invoices.  
+
+✔ **Submit Complaints** – Report issues directly to the admin.  
+
+✔ **Make Suggestions** – Provide feedback and suggestions.  
+
+---  
+
+## Install Depencencies
+cd client\
+npm install
+
+cd ../server\
+npm install
+
+cd ../\
+npm install -g concurrently
+
+
+
+
+---  
+## Run the application
+### For frontend
+cd client\
 npm run dev
-```
 
-## Login Details
-- AdminLogin
-    - muhammaddanish14@gmail.com
-    - Password: 123456789
-- Login
-    - ahad@gmail.com
-    - Password: 12345678
+### For bacckend
+cd backend\
+npm start
 
-## Add .env file in backend folder with following content
-```
-MONGO_URI="mongodb://127.0.0.1:27017/hostel"
-JWT_SECRET = "Anappleadaykeepsthedoctoraway"
-```
-
-## Contributing
-
-Contributions are always welcome!😊
 
 
 
