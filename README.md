@@ -40,27 +40,25 @@ A **MERN stack** web application designed to simplify and automate hostel manage
 ---  
 
 ## Install Depencencies
-cd client\
+```sh
+cd client
 npm install
 
-cd ../server\
+cd ../server
 npm install
 
-cd ../\
+cd ../
 npm install -g concurrently
-
-
-
-
+```
 ---  
 ## Run the application
-### For frontend
-cd client\
+```sh
+cd client
 npm run dev
 
-### For bacckend
-cd backend\
+cd backend
 npm start
+```
 
 
 
