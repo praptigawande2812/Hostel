@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "645aae56db7005c0dc64fd92"
   },
-  "name": "D2",
+  "name": "Girls",
   "location": "https://goo.gl/maps/Az89wA3NsPaXfMfP9",
   "rooms": 350,
   "capacity": 700,
@@ -10,11 +10,81 @@
 },
 {
   "_id": {
-    "$oid": "67acd61f583c502850313782"
+    "$oid": "67f741b31c3f31a291e6089e"
   },
-  "name": "D1",
-  "location": "https://goo.gl/maps/Az89wA3NsPaXfMfP9",
-  "rooms": 30,
-  "capacity": 120,
-  "vacant": 12
+  "name": "Hostel 1",
+  "location": "Campus A",
+  "rooms": 100,
+  "capacity": 400,
+  "vacant": 400
+},
+{
+  "_id": {
+    "$oid": "67f741b31c3f31a291e6089f"
+  },
+  "name": "Hostel 2",
+  "location": "Campus A",
+  "rooms": 100,
+  "capacity": 400,
+  "vacant": 400
+},
+{
+  "_id": {
+    "$oid": "67f741b31c3f31a291e608a0"
+  },
+  "name": "Hostel 3",
+  "location": "Campus B",
+  "rooms": 100,
+  "capacity": 400,
+  "vacant": 400
+},
+{
+  "_id": {
+    "$oid": "67f741b31c3f31a291e608a1"
+  },
+  "name": "Hostel 4",
+  "location": "Campus B",
+  "rooms": 100,
+  "capacity": 400,
+  "vacant": 400
+},
+{
+  "_id": {
+    "$oid": "67f741b31c3f31a291e608a2"
+  },
+  "name": "Hostel 5",
+  "location": "Campus C",
+  "rooms": 100,
+  "capacity": 400,
+  "vacant": 400
+},
+{
+  "_id": {
+    "$oid": "67f741b31c3f31a291e608a3"
+  },
+  "name": "Hostel 6",
+  "location": "Campus C",
+  "rooms": 100,
+  "capacity": 400,
+  "vacant": 400
+},
+{
+  "_id": {
+    "$oid": "67f741b31c3f31a291e608a4"
+  },
+  "name": "Hostel 7",
+  "location": "Campus D",
+  "rooms": 100,
+  "capacity": 400,
+  "vacant": 400
+},
+{
+  "_id": {
+    "$oid": "67f741b31c3f31a291e608a5"
+  },
+  "name": "Hostel 8",
+  "location": "Campus D",
+  "rooms": 100,
+  "capacity": 400,
+  "vacant": 400
 }]

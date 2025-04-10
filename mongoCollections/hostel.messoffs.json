@@ -239,9 +239,66 @@
   "return_date": {
     "$date": "2025-03-13T00:00:00.000Z"
   },
-  "status": "pending",
+  "status": "approved",
   "request_date": {
     "$date": "2025-02-13T12:15:06.071Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67af5c33ddd82fcf0bfaeba4"
+  },
+  "student": {
+    "$oid": "67acd190c6048e87b0a1d418"
+  },
+  "leaving_date": {
+    "$date": "2025-02-17T00:00:00.000Z"
+  },
+  "return_date": {
+    "$date": "2025-02-27T00:00:00.000Z"
+  },
+  "status": "approved",
+  "request_date": {
+    "$date": "2025-02-14T15:07:31.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67bd44ea693d5bb41105b7cc"
+  },
+  "student": {
+    "$oid": "67acd190c6048e87b0a1d418"
+  },
+  "leaving_date": {
+    "$date": "2025-02-27T00:00:00.000Z"
+  },
+  "return_date": {
+    "$date": "2025-02-28T00:00:00.000Z"
+  },
+  "status": "rejected",
+  "request_date": {
+    "$date": "2025-02-25T04:19:54.159Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67efab19dac104bd31b4369e"
+  },
+  "student": {
+    "$oid": "67acd190c6048e87b0a1d418"
+  },
+  "leaving_date": {
+    "$date": "2025-04-16T00:00:00.000Z"
+  },
+  "return_date": {
+    "$date": "2025-04-30T00:00:00.000Z"
+  },
+  "status": "pending",
+  "request_date": {
+    "$date": "2025-04-04T09:49:13.569Z"
   },
   "__v": 0
 }]

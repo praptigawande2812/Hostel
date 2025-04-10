@@ -136,9 +136,27 @@
   },
   "title": "In time",
   "description": "increase intime",
-  "status": "pending",
+  "status": "approved",
   "date": {
     "$date": "2025-02-13T13:11:48.894Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67bd454d693d5bb41105b7d7"
+  },
+  "student": {
+    "$oid": "67acd190c6048e87b0a1d418"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "title": "Drinking Water",
+  "description": "ftyhguj",
+  "status": "pending",
+  "date": {
+    "$date": "2025-02-25T04:21:33.227Z"
   },
   "__v": 0
 }]

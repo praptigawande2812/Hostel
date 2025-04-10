@@ -244,4 +244,42 @@
     "$date": "2025-02-12T16:07:32.833Z"
   },
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67efa83a86c1412a7481bfcf"
+  },
+  "student": {
+    "$oid": "67acd190c6048e87b0a1d418"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "type": "Cleaning",
+  "title": "Room",
+  "description": "ftdytgefuyr",
+  "status": "solved",
+  "date": {
+    "$date": "2025-04-04T09:36:58.151Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67efab5fdac104bd31b436ad"
+  },
+  "student": {
+    "$oid": "67acd190c6048e87b0a1d418"
+  },
+  "hostel": {
+    "$oid": "645aae56db7005c0dc64fd92"
+  },
+  "type": "Others",
+  "title": "Door",
+  "description": "dscdvfdv",
+  "status": "pending",
+  "date": {
+    "$date": "2025-04-04T09:50:23.452Z"
+  },
+  "__v": 0
 }]
