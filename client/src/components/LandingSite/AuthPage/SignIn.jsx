@@ -1,6 +1,6 @@
 import { Input } from "./Input";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { verifysession } from "../../../utils/";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,9 +9,11 @@ import { Loader } from "../../Dashboards/Common/Loader";
 export default function SignIn() {
   let navigate = useNavigate();
 
-  if (localStorage.getItem("token")) {
-    verifysession();
-  }
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      verifysession();
+    }
+  }, []); // Only run once when component mounts
 
   let login = async (event) => {
     event.preventDefault();
@@ -21,13 +23,28 @@ export default function SignIn() {
       password: pass,
     };
 
-    let response = await fetch("http://localhost:3000/api/auth/login", {
+          let response = await fetch("http://localhost:3000/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data)
     });
+
+    if (!response.ok) {
+      toast.error("Network error. Please try again.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setLoader(false);
+      return;
+    }
 
     let result = await response.json();
 
@@ -43,12 +60,40 @@ export default function SignIn() {
           token: result.data.token})
       });
 
+      if (!student.ok) {
+        toast.error("Failed to get student data. Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        setLoader(false);
+        return;
+      }
+
       let studentResult = await student.json();
       if (studentResult.success) {
         localStorage.setItem("student", JSON.stringify(studentResult.student));
         navigate("/student-dashboard");
       } else {
-        // console.log(studentResult.errors)
+        console.error("Student fetch error:", studentResult.errors);
+        toast.error(
+          studentResult.errors || "Failed to get student data", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        setLoader(false);
+        return;
       }
     } else {
       // alert(result.errors[0].msg);
